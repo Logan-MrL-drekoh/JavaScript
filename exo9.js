@@ -14,10 +14,10 @@
     
 //    }
 // } 
-
+// console.log(prenom* n-1);
 
 // /**exercice 2 */
-// console.log(prenom* n-1)
+
 
 
 // var nombre =parseInt (window.prompt("entrez un nombre"));
@@ -50,14 +50,18 @@
 // var moy = somme/counter;
 // alert("La somme est : "+somme+"."+"Le nombre de saisie :"+counter+"."+"La moyenne de toutes les saisies"+moy+".");
 
-/*Exercice 4*/
-var N=0;
-var X=0;
-N = parseInt(window.prompt("Entrez le premier nombre"));
-X = parseInt(window.prompt("Entrez le deuxieme nombre"));
+// /*Exercice 4*/
+// var N=0;
+// var X=0;
+// N = parseInt(window.prompt("Entrez le premier nombre"));
+// X = parseInt(window.prompt("Entrez le deuxieme nombre"));
 
-for (N=0;N<=N;N++){
-    result=N*X;
-    alert(result);   
+// for (N=0;N<=N;N++){
+//     result=N*X;
+//     alert(result); 
+//     console.log(result)  
 
-}
+// }
+
+/*Exercice 5 */
+
