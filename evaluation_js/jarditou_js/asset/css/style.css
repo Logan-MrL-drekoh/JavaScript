@@ -1,0 +1,260 @@
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+}
+
+/*corps de toute les pages*/
+
+body{
+    background-color: burlywood;
+    width: 100%;
+    height: 100%;
+}
+
+/*Entete de toute les pages*/
+
+header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#logo{
+    width: 30%;
+}
+#slogan{
+    width: 70%;
+    font-size: 3rem;
+    text-align: center;
+    text-decoration: underline;
+}
+/*Navigation de toute les pages*/
+
+
+#promo{
+    width: 100%;
+    position: relative;
+    margin: 0;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+    font-size: 150%;
+}
+
+a:hover{
+    color: rgb(55, 139, 55);
+}
+
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(55, 139, 55);
+    padding: 0.75%;
+    margin: 1%;
+    font-size: 125%;
+}
+
+.link:hover{
+    background-color:burlywood;
+    font-size: 150%;
+    
+    
+}
+h1{
+    justify-content: center;
+    font-size: 300%;
+    text-decoration: underline;
+    width: auto;
+    height: auto;
+    margin-left: 25rem;
+    margin-right: 25rem;
+    text-align: center;
+   
+}
+.text{
+    word-spacing: 0.5rem;
+    text-align: center;
+}
+
+article{
+    font-size: 150%;
+}
+
+
+/*Section de toute les pages*/
+
+
+section{
+    width: 100%;
+}
+h2{
+    background-color: rgb(55, 139, 55);
+    text-decoration: underline;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 150%;
+   
+    text-align: center;
+}
+
+p{
+    font-size: 110%;
+}
+
+
+#container{
+    display: flex;
+
+}
+
+aside{
+    background-color: grey;
+    width: 35%;
+}
+/*Contact*/
+
+
+
+
+legend{
+    margin: 10px;
+}
+input{font-size: 100%;
+    margin: 5px;
+    background-color: rgb(55, 139, 55);
+}
+input::placeholder{
+     color: black;
+}
+
+select{
+    background-color:rgb(55, 139, 55);
+    font-size: 100%;
+    border-radius: 3px;
+}
+
+textarea{
+    background-color: rgb(55, 139, 55);
+    font-size: 100%;
+    border-radius: 5px;
+}
+
+.btn-contact{
+    padding: 1rem 2rem;
+    font-size: 1.25rem;
+    color: black;
+    background-color: burlywood;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-contact:hover{
+    background-color: rgb(55, 139, 55);
+    color: #1f1e1e;
+    border-color: rgb(55, 139, 55);
+}
+
+main{
+    border: 5px solid black;
+    padding: 10px 20px 10px 20px;
+    margin: 1.5rem;
+    width: 100%;
+    text-align: center;
+}
+
+
+/*tableau*/
+
+
+thead{
+    width: auto;
+    height: auto;
+    font-size: 200%;
+    word-spacing: 3rem;
+        width: 100%;
+
+}
+
+.photo{
+    width: 150px;
+    border: 3px;
+    border-radius: 50rem;
+}
+
+table{
+   margin: auto;
+
+}
+tbody{
+    text-align: center;
+    font-size: 125%;  
+    justify-content: space-around; 
+    
+}
+
+
+#tableau{
+    border: 0.2rem solid black;
+}
+
+span{
+    color: red;
+}
+
+/************************************************************************************RESPONSIVE*******************************************************************/
+@media  screen and (max-width: 768px)
+{
+    /*all*/
+    
+    body{
+        width: 768px;
+    }
+    
+    nav{
+        width: 100%;
+    }
+
+    .link:hover{
+        background-color:burlywood;
+    }
+    
+    ul{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    aside{
+        display: none;
+    }
+
+   /*Tableau*/
+
+    #tableau{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+    /*Formulaire*/
+
+    #container{
+        width: 100%;
+        font-size: 1.2rem;
+    }
+
+
+
+
+}
+
+
+
+

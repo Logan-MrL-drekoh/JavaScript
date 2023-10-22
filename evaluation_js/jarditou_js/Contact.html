@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!--il contient la meta utf8 et les lien entre le css max width & le css media 768px-->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no"/>
+    <link rel="stylesheet" href="asset/css/style.css" />
+    <title>Contact</title>
+  </head>
+  
+  <body>
+    
+    <header>
+      <!--Contient le logo du site et le Slogan-->
+      <img id="logo" src="asset/img/jarditou_logo.png" alt="jarditou logo"/>
+      <p id="slogan">Tout le jardin</p>
+    </header>
+    
+    <nav>
+      <!--Menu de navigation entre les differene pages & la banniere-->
+      <ul class="nav-links">
+        <li><a class="link" href="index.html">Acceuil</a></li>
+        <li><a class="link" href="tableau.html">Tableau</a></li>
+        <li><a class="link" href="contact.html">Formulaire</a></li>
+      </ul>
+      <a href="#"><img id="promo" src="asset/img/promotion.jpg" alt="promo"/></a>
+    </nav>
+
+    <div id="container">
+      <!--Ceci est une div contenant la section et l'aside-->
+
+      <main>
+        <!--Cette section contient le panel pour avoir un contact-->
+        <h2>Contact</h2>
+        
+            <form action="http://bienvu.net/script.php" method="get">
+                <p>*Ces Zones sont obligatoires</p>
+                  <fieldset>
+                      <legend>Vos Coordonnées</legend>
+
+                          <label for="nom">Votre noms <span>*</span>:</label>
+                          <input type="text" name="nom" placeholder="Entrez votre nom" pattern="^[A-z]+$" required id="nom"><br><br>
+            
+                          <label for="prenom">Votre prenom<span>*</span>:</label>
+                          <input type="text" name="prenom" placeholder="Entrez votre prenom" pattern="^[A-z]+$" required id="prenom"><br><br>
+            
+                          <label for="sexe" id="sexe_f">Sexe:</label>
+                          <input type="radio" name="sexe" id="sexe_f" value="feminin">feminin <label for="sexe" id="sexe_m"></label>
+                          <input type="radio" name="sexe" id="sexe_m" value="masculin">masculin <br><br>
+
+                          <label for="postal">Code Postal<span>*</span>:</label>
+                          <input type="number" name="postal" placeholder="Entrez votre Code Postal" required id="postal"><br><br>
+                          
+                          <label for="adresse">Adresse<span>*</span>:</label>
+                          <input type="text" name="Adresse" placeholder="Entrez votre adresse" pattern="^[A-z]+$+[0-9]" required id="adresse"><br><br>
+           
+                          <label for="ville">Ville*:</label>
+                          <input type="text" name="Ville" placeholder="Entrez votre ville" pattern="^[A-z]+$" required id="ville"><br><br>
+            
+                          <label for="email">Email<span>*</span>:</label>
+                          <input type="email" name="email" placeholder="Entrez votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email"><br>
+            
+                  </fieldset>
+          
+                  <fieldset>
+                      <legend>Votre Demande</legend>
+            
+                          <label for="Question" id="sujet">Sujet<span>*</span>:</label>
+                            <select id="Question">
+                              <option value="1" disabled hidden selected>Veuillez séléctionner un sujet</option>
+                              <option value="2">Mes commandes</option>
+                              <option value="3">Question sur un produit</option>
+                              <option value="4">Réclamation</option>
+                              <option value="5">Autres</option>
+                            </select><br><br>
+            
+                          <label for="Question">Votre Question<span>*</span>:</label>
+                          <textarea name="Question" cols="10" rows="5" required> </textarea><br><br>
+            
+                          <label for="formulaire"></label>
+                          <input type="checkbox" name="Formulaire" required="required" id="formulaire">
+                          <span>*</span>J'accepte le traitement informatique de ce formulaire<br />
+          
+                  </fieldset><br>
+          
+                      <button class="btn-contact" type="submit">Envoyer</button>
+                      <button class="btn-contact" type="reset">Annuler</button>
+        
+            </form>
+        
+      </main>
+
+      <aside>
+        Colonne de droite
+      </aside>
+      <!--Ceci est l'aside ne doit pas etre visble avec media responsive 768px -->
+    </div>
+    
+    <footer>
+      <!--Ceci est un bas de page il contiont d'autres informations du site (mention,horaires, plan du site)-->
+      <ul class="nav-links">
+          <li><a class="link" href="#">Mention légales</a></li>
+          <li><a class="link" href="#">Horaires</a></li>
+          <li><a class="link" href="#">Plan du site</a></li>
+      </ul>
+
+    </footer>
+    <script src="jarditou.js"></script>
+  </body>
+</html>
