@@ -6,16 +6,16 @@ var vieux=0;
 var personnes;
 do{
 personnes = parseInt(window.prompt("Entrez votre age:"));
-    if (personnes <= 19){
+    if (personnes < 20){
         jeunes++;
             console.log(jeunes);
 }
 
-    if ((personnes >=20) && (personnes <=40)){
+    else if ((personnes >=20) && (personnes <=40)){
         adultes++;
             console.log(adultes);
     } 
-    else if ((personnes>=41)&& (personnes<=99)){
+    if ((personnes>=41)&& (personnes<=99)){
         vieux++;
         console.log(vieux);
     }
@@ -24,42 +24,45 @@ personnes = parseInt(window.prompt("Entrez votre age:"));
 
 }while(personnes < 100);
 
-window.alert("Il y a " + "" + jeunes + "" + " jeunes\n " + "Il y a " + "" + adultes + "" + " adulte\n " + " Il y a " + " Il y a " + "" + vieux + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
+window.alert("Il y a " + "" + jeunes + "" + " jeunes\n " + "Il y a " + "" + adultes + "" + " adulte\n " + " Il y a " + "" + vieux + "" +" vieux\n " + " dont "+ " 1 " + "" + " centenaire ");
 
 
 
 /*Exercice 2 */
+n=parseInt(window.prompt("Entrez un nombre"));
 
-nombre=window.prompt("Entrez le numéro de la table:");
-
-
-var i;
-for (i=1; i<=10; i++)
-{
-document.write(nombre+" x "+i+"="+nombre*i+"<br>");
+function tablemultiplication(nombre){
+        for(let i=1; i<=10; i++){
+            console.log(nombre + "X"+ i +"="+ nombre*i);
+            document.write(nombre + "X"+ i +"="+ nombre*i +"<br>");
+        }
 }
 
 
+tablemultiplication(n);
+
+
+/*Exercice 3 */
  
-var tab = ["audrey","aurelien", "flavien", "jeremy", "laurent", "melik", "nouara", "salem", "samuel", "stephane"];
+// var tab = ["audrey","aurelien", "flavien", "jeremy", "laurent", "melik", "nouara", "salem", "samuel", "stephane"];
  
-{
-    var saisi = window.prompt("Veuillez choisir un prénom audrey, aurelien, flavien,jeremy,laurent,melik,nouara,salem,samuel,stephane. ")
-    var rang = tab.indexOf(saisi);
+// {
+//     var saisi = window.prompt("Veuillez choisir un prénom audrey, aurelien, flavien,jeremy,laurent,melik,nouara,salem,samuel,stephane. ")
+//     var rang = tab.indexOf(saisi);
  
  
-if (rang>=0)
-{
-    var sup = tab.splice(rang,1);
-    /*console.log("rang"+sup)*/
-    console.log(tab);
-    var nb = tab.push("");
+// if (rang>=0)
+// {
+//     var sup = tab.splice(rang,1);
+//     console.log("rang"+""+sup)
+   
+//     var nb = tab.push("");
  
-    console.log(tab);
+//     console.log(tab);
  
-}
-else {
-    alert ("Mauvais prénom")
+// }
+// else {
+//     alert ("Mauvais prénom")
  
-}
-}
+// }
+// }
