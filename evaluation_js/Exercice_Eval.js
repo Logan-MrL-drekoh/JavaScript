@@ -71,35 +71,54 @@
 /*Exercice 4*/
 
 
-var PU=0;
-var QTECOM=0;
-var PAP=0;
-var REM=0;
-var PORT=0;
 
 PU =parseInt(window.prompt("prix unitaire du produit:"));
 QTECOM = parseInt(window.prompt("Quantité du produit:"));
+var REM=0;
+var PORT=0;
 var TOT = PU*QTECOM;
-alert(TOT)
 
-function remise(){
-
-if (TOT>=100 && TOT<=200){
-    REM=TOT*0.95;
-}
-else if (TOT>200){
-    REM=TOT*0.90;
+if (TOT<100){
+    PORT=6;
+    PAP = TOT+PORT;
+    alert(PAP)
 }
 
-alert(REM);
-}
-remise(REM);
+else if (TOT>=100 && TOT<=200){
+    prixrem = (5*TOT)/100;
+    PORT=6;
+    PAP=TOT-prixrem+PORT;
+    alert(PAP);
 
-function frais(){
-if ((remise<500)){
-    PORT= REM *1.02;
-    console.log(PORT);
-    alert(PORT);
 }
+
+
+
+
+else if (TOT>200 && TOT<500){
+    prixrem = (10*TOT)/100;
+    PORT=prixrem*0.02;
+    PAP=TOT-prixrem+PORT;
+    alert(PAP);
 }
-frais(PORT);
+
+
+
+ else if (TOT>500){
+    REM = (10*TOT)/100;
+    prixrem= TOT-REM;
+    console.log(prixrem);
+    if(prixrem<500){
+    PORT= prixrem*0.02;
+    PAP=prixrem+PORT;
+    alert(PAP);
+ }
+
+ else if (prixrem>500){
+   
+    console.log(prixrem);
+    alert(prixrem);
+    
+ }
+}
+
