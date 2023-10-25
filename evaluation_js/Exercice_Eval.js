@@ -81,14 +81,15 @@ var TOT = PU*QTECOM;
 if (TOT<100){
     PORT=6;
     PAP = TOT+PORT;
-    alert(PAP)
+    alert("Les frais de port sont de :"+PORT+ "€\n"+"Le prix total a payé est de :"+PAP+"€\n");
+
 }
 
 else if (TOT>=100 && TOT<=200){
     prixrem = (5*TOT)/100;
     PORT=6;
     PAP=TOT-prixrem+PORT;
-    alert(PAP);
+    alert("La remise est de "+prixrem+"€\n"+"Les frais de port sont de :"+PORT+ "€\n"+"Le prix total a payé est de :"+PAP+"€\n");
 
 }
 
@@ -96,10 +97,19 @@ else if (TOT>=100 && TOT<=200){
 
 
 else if (TOT>200 && TOT<500){
-    prixrem = (10*TOT)/100;
-    PORT=prixrem*0.02;
-    PAP=TOT-prixrem+PORT;
-    alert(PAP);
+    REM = (10*TOT)/100;
+    prixrem=TOT-REM;
+    if(prixrem<300){
+        PORT=6;
+        PAP=prixrem+PORT;
+    }
+    else if (prixrem>300 && prixrem<500){
+        PORT=prixrem*0.02;
+        PAP=prixrem+PORT;
+
+    }
+    alert("La remise est de "+prixrem+"€\n"+"Les frais de port sont de :"+PORT+ "€\n"+"Le prix total a payé est de :"+PAP+"€\n");
+
 }
 
 
@@ -111,13 +121,15 @@ else if (TOT>200 && TOT<500){
     if(prixrem<500){
     PORT= prixrem*0.02;
     PAP=prixrem+PORT;
-    alert(PAP);
+    alert("La remise est de "+prixrem+"€\n"+"Les frais de port sont de :"+PORT+ "€\n"+"Le prix total a payé est de :"+PAP+"€\n");
+
  }
 
  else if (prixrem>500){
    
     console.log(prixrem);
-    alert(prixrem);
+    alert("Le prix a payé est de "+prixrem+"€\n");
+
     
  }
 }

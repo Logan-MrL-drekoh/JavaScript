@@ -33,64 +33,66 @@
         <!--Cette section contient le panel pour avoir un contact-->
         <h1 id="contact">Contact</h1>
         
-            <form action="http://bienvu.net/script.php" method="get">
-                <p>*Ces Zones sont obligatoires</p>
-                  <fieldset>
-                      <legend>Vos Coordonnées</legend>
+        <form action="http://bienvu.net/script.php" method="get">
+          <fieldset class="PremierePartie">
+              <legend>Vos coordonnées</legend>
+                  <label for="nom">Votre nom* : </label>
+                      <input type="text" name="nom" id="nom" pattern="^[A-z]+$"  title="Entrez votre nom">
+                  <p style="color: red;" id="erreur"></p>
+                  <label for="prenom">Votre prenom* : </label>    
+                      <input type="text" name="prenom" id="prenom" pattern="^[A-z]+$"  title="Entrez votre prenom">
+                      <p style="color: red;" id="erreur1"></p>
 
-                          <label for="nom">Votre nom <span>*</span>:</label>
-                          <input type="text" name="nom" placeholder="Entrez votre nom" pattern="^[A-z]+$" required id="nom">
-                          <span id="nom_manquant"></span><br>
-            
-                          <label for="prenom">Votre prenom<span>*</span>:</label>
-                          <input type="text" name="prenom" placeholder="Entrez votre prenom" pattern="^[A-z]+$" required id="prenom">
-                          <span id="prenom_manquant"></span><br>
+                      <p id="sexe">Sexe* :</p>
+                      <input type="radio" name="sexe" value="Feminin" id="sexe_f" title="Champs obligatoires"><label for="sexe">Féminin</label>
+                  
+                      <input type="radio" name="sexe" value="Masculin" id="sexe_m"  title="Champs obligatoires"><label for="sexe">Masculin</label>
+                 <br> <p style="color: red;" id="erreurtest"></p>
+                  <label for="date">Date de naissance* : </label>
+                      <input type="date" name="ddn" id="date" title="Entrez votre date de naissance"><br>
+                      <p style="color: red;" id="erreur2"></p>
 
+                  <label for="cp">Code postal* : </label>
+                      <input type="text" name="cp" id="cp"   title="Entrez votre code postal"><br>
+                      <p style="color: red;" id="erreur3"></p>
 
-                          <label for="sexe" id="sexe_f">Sexe:<span>*</span></label>
-                          <input type="radio" name="sexe" id="sexe_f" value="feminin">feminin 
-                          
-                          <label for="sexe" id="sexe_h"></label>
-                          <input type="radio" name="sexe" id="sexe_h" value="masculin">masculin <br><br>
+                  <label for="adresse">Adresse : </label>
+                      <input type="text" name="adresse" id="adresse"><br>
+              
+                  <label for="ville">Ville :</label>
+                      <input type="text" name="ville" pattern="[A-z]" id="ville"><br>
+                      
+                  <label for="email">Email* : </label>
+                      <input type="email" name="email" id="email" title="Entrez votre email">
+                      <p style="color: red;" id="erreur4"></p>
 
-                          <label for="postal">Code Postal<span>*</span>:</label>
-                          <input type="number" name="postal" placeholder="Entrez votre Code Postal" required id="postal"><br><br>
-                          
-                          <label for="adresse">Adresse:</label>
-                          <input type="text" name="Adresse" placeholder="Entrez votre adresse" pattern="^[A-z]+$+[0-9]" required id="adresse"><br><br>
-           
-                          <label for="ville">Ville:</label>
-                          <input type="text" name="Ville" placeholder="Entrez votre ville" pattern="^[A-z]+$" required id="ville"><br><br>
-            
-                          <label for="email">Email<span>*</span>:</label>
-                          <input type="email" name="email" placeholder="Entrez votre Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required id="email"><br>
-            
-                  </fieldset>
-          
-                  <fieldset>
-                      <legend>Votre Demande</legend>
-            
-                          <label for="Question" id="sujet">Sujet<span>*</span>:</label>
-                            <select id="Question">
-                              <option value="1" disabled hidden selected>Veuillez séléctionner un sujet</option>
-                              <option value="2">Mes commandes</option>
-                              <option value="3">Question sur un produit</option>
-                              <option value="4">Réclamation</option>
-                              <option value="5">Autres</option>
-                            </select><br><br>
-            
-                          <label for="Question">Votre Question<span>*</span>:</label>
-                          <textarea name="Question" cols="10" rows="2" required> </textarea><br><br>
-            
-                          <label for="formulaire"></label>
-                          <input type="checkbox" name="Formulaire" required="required" id="formulaire">
-                          <span>*</span>J'accepte le traitement informatique de ce formulaire<br />
-          
-                  </fieldset><br>
-          
-                  <input type="submit" class="btn-contact" value="Envoyer" id="btn_envoi">    
-                  <input type="reset" class="btn-contact" value="Annuler" id="btn_reset">
-            </form>
+                              <!--Seconde partie du formulaire-->
+          </fieldset>
+          <fieldset >
+              <legend>Votre demande</legend>
+                  <label for="sujet">Sujet* : </label>
+
+                      <select id="sujet" size="1">
+                          <option selected hidden disabled value="">Veuillez selectionner un sujet</option>
+                          <option value="mesCommandes">Mes commandes</option>
+                          <option value="questionSurUnProduit">Question sur un produit</option>
+                          <option value="reclamation">Reclamation</option>
+                          <option value="autres">Autres</option>
+                      </select><br>
+                      <p style="color: red;" id="erreur5"></p>
+
+                  <label for="question">Votre question* : </label><br>
+                  <textarea name="question" id="question" cols="20" rows="1"></textarea>
+                  <p style="color: red;" id="erreur6"></p>
+          </fieldset>
+                  <input type="checkbox" name="check" value="check" id="check" title="Champs obligatoires">
+                      <label for="check">J'accepte le traitement informatique de ce Formulaire</label><br>
+                      <p  style="color: red;"id="erreur7"></p>
+
+                  
+                  <input type="submit" value="Envoyer" id="submit">
+                  <input type="reset" value="Annuler" id="reset">
+      </form>
         
       </main>
 
