@@ -33,45 +33,48 @@
         <!--Cette section contient le panel pour avoir un contact-->
         <h1 id="contact">Contact</h1>
         
-        <form action="http://bienvu.net/script.php" method="get">
+        <form action="http://bienvu.net/script.php" method="get" id="monFormulaire" onsubmit="return validerFormulaire();">
           <fieldset class="PremierePartie">
               <legend>Vos coordonnées</legend>
+              
                   <label for="nom">Votre nom* : </label>
-                      <input type="text" name="nom" id="nom" pattern="^[A-z]+$"  title="Entrez votre nom">
+                      <input type="text" name="nom" id="nom"  title="Entrez votre nom">
                   <p style="color: red;" id="erreur"></p>
+
                   <label for="prenom">Votre prenom* : </label>    
-                      <input type="text" name="prenom" id="prenom" pattern="^[A-z]+$"  title="Entrez votre prenom">
+                      <input type="text" name="prenom" id="prenom"   title="Entrez votre prenom">
                       <p style="color: red;" id="erreur1"></p>
-
-                      <p id="sexe">Sexe* :</p>
-                      <input type="radio" name="sexe" value="Feminin" id="sexe_f" title="Champs obligatoires"><label for="sexe">Féminin</label>
+  
+                      <label for="sexe">Sexe:</label>
+                      <input type="radio" name="Sexe" value="Feminin" id="sexe_f" title="Champs obligatoires"><label for="sexe_f">Féminin</label>
+                      <input type="radio" name="Sexe" value="Masculin" id="sexe_m" title="Champs obligatoires"><label for="sexe_m">Masculin</label>
+                      <br>
+                      <p style="color: red;" id="erreursexe"></p>
                   
-                      <input type="radio" name="sexe" value="Masculin" id="sexe_m"  title="Champs obligatoires"><label for="sexe">Masculin</label>
-                 <br> <p style="color: red;" id="erreurtest"></p>
-                  <label for="date">Date de naissance* : </label>
-                      <input type="date" name="ddn" id="date" title="Entrez votre date de naissance"><br>
+                  <label for="dob">Date de naissance* : </label>
+                      <input type="date" name="ddn" id="dob" title="Entrez votre date de naissance"><br>
                       <p style="color: red;" id="erreur2"></p>
-
+  
                   <label for="cp">Code postal* : </label>
                       <input type="text" name="cp" id="cp"   title="Entrez votre code postal"><br>
                       <p style="color: red;" id="erreur3"></p>
-
+  
                   <label for="adresse">Adresse : </label>
                       <input type="text" name="adresse" id="adresse"><br>
               
                   <label for="ville">Ville :</label>
-                      <input type="text" name="ville" pattern="[A-z]" id="ville"><br>
+                      <input type="text" name="ville"  id="ville"><br>
                       
                   <label for="email">Email* : </label>
                       <input type="email" name="email" id="email" title="Entrez votre email">
                       <p style="color: red;" id="erreur4"></p>
-
+  
                               <!--Seconde partie du formulaire-->
           </fieldset>
           <fieldset >
               <legend>Votre demande</legend>
                   <label for="sujet">Sujet* : </label>
-
+  
                       <select id="sujet" size="1">
                           <option selected hidden disabled value="">Veuillez selectionner un sujet</option>
                           <option value="mesCommandes">Mes commandes</option>
@@ -80,20 +83,20 @@
                           <option value="autres">Autres</option>
                       </select><br>
                       <p style="color: red;" id="erreur5"></p>
-
+  
                   <label for="question">Votre question* : </label><br>
                   <textarea name="question" id="question" cols="20" rows="1"></textarea>
                   <p style="color: red;" id="erreur6"></p>
           </fieldset>
-                  <input type="checkbox" name="check" value="check" id="check" title="Champs obligatoires">
+                  <input type="checkbox" name="checked" value="check" id="check" title="Champs obligatoires">
                       <label for="check">J'accepte le traitement informatique de ce Formulaire</label><br>
                       <p  style="color: red;"id="erreur7"></p>
-
+  
                   
                   <input type="submit" value="Envoyer" id="submit">
                   <input type="reset" value="Annuler" id="reset">
       </form>
-        
+      <div id="message"></div>
       </main>
 
       <aside>
